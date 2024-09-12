@@ -14,3 +14,16 @@ From this [tweet](https://x.com/sq7ro/status/1765054741006946456), the beam is n
 - SSEC: Madison 43°04′29″N 89°23′03″W
 
 While I can't be certain, I believe the SSEC's (and by extension, the antenna's) location should not cause problems in attempting to recieve data from Arktika.  
+
+## Arved's setup 
+
+From this [article](https://www.rtl-sdr.com/receiving-x-band-images-from-the-arktika-m1-arctic-monitoring-satellite/). Connected to Arktika-M1's X-band downlink at 7865 MHz and this appears to be the only way to recieve imagery at the moment. Notably, this means having access to X-Band RF gear: 
+- Low noise pre-amplifier 
+- Downconverter 
+- A high bandwidth SDR
+Arved's equipment: 
+- A pre-amp by MITEQ (36dB gain, 1dB noise figure)
+- DK5AV compact X-Band downconverter (they made this themselves)
+- LimeSDR-USB
+
+He uses a Channel Master 2.4m prime focus dish in North Eastern Geramny and it produces around 9-10dB of SNR (signal to noise ratio) through SatDump. He also notes that an SNR > 5dB should have a decode but there is no forward error correction so decode does not automatically imply a clean image. 
